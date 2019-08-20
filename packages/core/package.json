@@ -30,7 +30,7 @@
     "@babel/runtime": "^7.4.3",
     "@emotion/cache": "^10.0.15",
     "@emotion/css": "^10.0.14",
-    "@emotion/serialize": "file:../styled-base",
+    "@emotion/serialize": "file:../serialize",
     "@emotion/sheet": "0.9.3",
     "@emotion/utils": "0.11.2"
   },
