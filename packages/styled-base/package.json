@@ -25,7 +25,7 @@
     "dtslint": "^0.3.0"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.15",
+    "@emotion/core": "file:../core",
     "react": ">=16.3.0"
   },
   "publishConfig": {
