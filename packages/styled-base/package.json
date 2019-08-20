@@ -10,14 +10,14 @@
   },
   "types": "types/index.d.ts",
   "license": "MIT",
-  "repository": "https://github.com/emotion-js/emotion/tree/master/packages/styled-base",
+  "repository": "https://github.com/glassesfactory/emotion/tree/master/packages/styled-base",
   "scripts": {
     "test:typescript": "dtslint types"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.3",
     "@emotion/is-prop-valid": "0.8.2",
-    "@emotion/serialize": "^0.11.9",
+    "@emotion/serialize": "git+ssh://git@github.com/glassesfactory/emotion.git/packages/serialize#master",
     "@emotion/utils": "0.11.2"
   },
   "devDependencies": {
