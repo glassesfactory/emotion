@@ -13,11 +13,10 @@ let animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g
 
 const isCustomProperty = (property: string) => property.charCodeAt(1) === 45
 
-const processStyleName = memoize(
-  (styleName: string) =>
-    isCustomProperty(styleName)
-      ? styleName
-      : styleName.replace(hyphenateRegex, '-$&').toLowerCase()
+const processStyleName = memoize((styleName: string) =>
+  isCustomProperty(styleName)
+    ? styleName
+    : styleName.replace(hyphenateRegex, '-$&').toLowerCase()
 )
 
 let processStyleValue = (
@@ -357,7 +356,9 @@ export const serializeStyles = function(
       match[1]
   }
 
-  let name = hashString(styles) + identifierName
+  let name = mergedProps.prefixName
+    ? mergedProps.prefixName + identifierName
+    : hashString(styles) + identifierName
 
   if (process.env.NODE_ENV !== 'production') {
     return {

@@ -29,9 +29,11 @@ let createStyled: CreateStyled = (tag: any, options?: StyledOptions) => {
   let identifierName
   let shouldForwardProp
   let targetClassName
+  let prefixName
   if (options !== undefined) {
     identifierName = options.label
     targetClassName = options.target
+    prefixName = options.prefix
     shouldForwardProp =
       tag.__emotion_forwardProp && options.shouldForwardProp
         ? propName =>
@@ -86,6 +88,10 @@ let createStyled: CreateStyled = (tag: any, options?: StyledOptions) => {
                 mergedProps[key] = props[key]
               }
               mergedProps.theme = theme
+            }
+
+            if (prefixName !== null) {
+              mergedProps.prefixName = prefixName
             }
 
             if (typeof props.className === 'string') {

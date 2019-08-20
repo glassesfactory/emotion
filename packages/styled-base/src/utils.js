@@ -20,7 +20,8 @@ export const getDefaultShouldForwardProp = (tag: React.ElementType) =>
 export type StyledOptions = {
   label?: string,
   shouldForwardProp?: string => boolean,
-  target?: string
+  target?: string,
+  prefix?: string
 }
 
 type CreateStyledComponent = (...args: Interpolations) => *
