@@ -11,7 +11,7 @@
     "test:typescript": "dtslint types"
   },
   "dependencies": {
-    "@emotion/styled-base": "ssh://github.com/glassesfactory/emotion.git/packages/styled-base#master",
+    "@emotion/styled-base": "file:./packages/styled-base",
     "babel-plugin-emotion": "^10.0.15"
   },
   "devDependencies": {
